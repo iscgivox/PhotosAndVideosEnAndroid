@@ -1,13 +1,20 @@
 
 package net.ivanvega.photosandvideosenandroid;
 
+import android.Manifest;
 import android.content.Intent;
+import android.content.pm.PackageManager;
 import android.graphics.Bitmap;
 import android.net.Uri;
 import android.os.Environment;
 import android.provider.MediaStore;
-import android.support.v4.app.Fragment;
+import android.support.v4.app.ActivityCompat;
+
 import android.os.Bundle;
+import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentActivity;
+import android.support.v4.content.ContextCompat;
+import android.support.v7.app.AppCompatActivity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -28,6 +35,13 @@ public class MainActivityFragment extends Fragment implements View.OnClickListen
     Button btnMin, btnFull;
 
     public MainActivityFragment() {
+    }
+
+    @Override
+    public void onResume() {
+
+
+        super.onResume();
     }
 
     @Override
@@ -114,5 +128,7 @@ public class MainActivityFragment extends Fragment implements View.OnClickListen
             }
 
     }
+
+
 
 }
